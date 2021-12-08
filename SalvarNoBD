@@ -1,0 +1,10 @@
+<?php
+	include_once('CódigodeConexãoemPHP.php');
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$sobrenome = $_POST['sobrenome'];
+	$senha = $_POST['senha'];
+	
+	$result_msg_contato = "INSERT INTO clientes ( email, nome, sobrenome, senha) VALUES ('$email', '$nome', '$sobrenome', '$senha', NOW())";
+	$resultado_msg_contato= mysqli_query($conn, $result_msg_contato)
+?>
