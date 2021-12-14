@@ -4,6 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CRUD - Cadastrar</title>		
+		
+		<?php
+if(isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
+?>
 	</head>
 	<body>
 		<h1>Cadastrar Usuário</h1>
