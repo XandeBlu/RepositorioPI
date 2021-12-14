@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 
 <head>
@@ -11,12 +9,7 @@ session_start();
 
 </head>
 <div id="main-container">
-    <?php
-		if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
-		}
-		?>
+
     <h1>Cadastre-se para acessar o sistema.</h1>
     <form id="register-form" method="POST" action="Processa.php">
         <div class="full-box">
@@ -47,7 +40,7 @@ session_start();
         <input id="btn-submit" type="submit" value="Registrar">
         </div>
         <div>
-            <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui</a></label>
+            <label>Já tem uma conta no site? <a href="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\CodigosHTML\PaginaDeLoginHTML.html">Clique aqui</a></label>
         </div>
     </form>
     </div>
