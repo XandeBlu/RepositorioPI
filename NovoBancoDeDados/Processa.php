@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("Conexao.php");
+include_once("conexao.php");
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
@@ -14,9 +14,9 @@ $result_usuario = "INSERT INTO clientes (nome, sobrenome, senha, email) VALUES (
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn)){
-	$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso.</p>";
+	$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso</p>";
 	header("Location: MeuIndex.php");
 }else{
-	$_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso.</p>";
+	$_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso</p>";
 	header("Location: MeuIndex.php");
 }
