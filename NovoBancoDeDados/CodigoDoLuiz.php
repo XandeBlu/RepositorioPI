@@ -1,17 +1,23 @@
-
-<!DOCTYPE html>
-
+<?php
+session_start();
+?>
 <head>
-    <meta charset="UTF-8">
-    <link href="../REPOSITORIOPI/CodigosCSS/styleRegistro.css" rel="stylesheet">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
-    <title>Cadastro</title>
+<meta charset="UTF-8">
+<link href="../HANNA KUPPAS/css/styleRegistro.css" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+<title>Cadastro</title>
 
 </head>
-<div id="main-container">
-
+<body>
+    <div id="main-container">
     <h1>Cadastre-se para acessar o sistema.</h1>
-    <form id="register-form" method="POST" action= "processa.php">
+    <?php
+    if(isset($_SESSION['msg'])){
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+        ?>
+    <form id="register-form" method="POST" action="Processa.php">
         <div class="full-box">
         <label for="email">E-mail</label>
         <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
@@ -40,10 +46,11 @@
         <input id="btn-submit" type="submit" value="Registrar">
         </div>
         <div>
-            <label>Já tem uma conta no site? <a href="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\CodigosHTML\PaginaDeLoginHTML.html">Clique aqui</a></label>
+            <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui</a></label>
         </div>
     </form>
     </div>
     <p class="error-validation template"></p>
-<script src="../REPOSITORIOPI/CodigosJavaScript/scriptRegistro.js"></script>
+<script src="../HANNA KUPPAS/js/scriptRegistro.js"></script>
+</body>
 </html>
