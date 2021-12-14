@@ -15,8 +15,8 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso</p>";
-	header("Location: MeuIndex.php");
+	header("Location: PaginadeRegistroHTML.html");
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso</p>";
-	header("Location: MeuIndex.php");
+	header("Location: PaginadeRegistroHTML.html");
 }
