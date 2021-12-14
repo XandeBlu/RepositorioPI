@@ -11,7 +11,7 @@ session_start();
 <body>
     <div id="main-container">
     <h1>Cadastre-se para acessar o sistema.</h1>
-    <form id="register-form" method="POST" action="processa.php">
+    <form id="register-form" method="POST" action="Processa.php">
         <div class="full-box">
         <label for="email">E-mail</label>
         <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
