@@ -15,7 +15,7 @@ session_start();
 			unset($_SESSION['msg']);
 		}
 		?>
-		<form method="POST" action="processa.php">
+		<form method="POST" action="Processa.php">
 			<label>Nome: </label>
 			<input type="text" name="nome" placeholder="Digite o nome "><br><br>
 			<label>Sobrenome: </label>
