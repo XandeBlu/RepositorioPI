@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendário</title>
-    <link rel="stylesheet" href="../REPOSITORIOPI/Hanna Kuppas/CodigosCSS/styleCalendario.css" />
+    <link rel="stylesheet" href="../REPOSITORIOPI/CodigosCSS/styleCalendario.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -21,10 +21,10 @@
       <div class="center">
           <div class="logo"><img src=""></div>
           <div class="menu">
-              <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaHomeHTML">Home</a>
-              <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaDeLoginHTML">Login</a>
-              <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaDeRegistroHTML"> Cadastro</a>
-              <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaDeAgendaHTML">Agende</a>
+              <a href="../REPOSITORIOPI/CodigosHTML/PaginaHomeHTML">Home</a>
+              <a href="../REPOSITORIOPI/CodigosHTML/PaginaDeLoginHTML">Login</a>
+              <a href="../REPOSITORIOPI/CodigosHTML/PaginaDeRegistroHTML"> Cadastro</a>
+              <a href="../REPOSITORIOPI/CodigosHTML/PaginaDeAgendaHTML">Agende</a>
           </div>
       </div>
   </header>
@@ -51,6 +51,6 @@
       </div>
     </div>
 
-    <script src="../REPOSITORIOPI/Hanna Kuppas/CodigosJavaScript/jsCalendario.js"></script>
+    <script src="../REPOSITORIOPI/CodigosJavaScript/jsCalendario.js"></script>
   </body>
 </html>
