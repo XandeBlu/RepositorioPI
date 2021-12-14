@@ -3,7 +3,7 @@ session_start();
 ?>
 <head>
 <meta charset="UTF-8">
-<link href="../Hanna Kuppas/css/styleRegistro.css" rel="stylesheet">
+<link href="../REPOSITORIOPI/CodigosCSS/styleRegistro.css" rel="stylesheet">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
 <title>Cadastro</title>
 
@@ -45,6 +45,6 @@ session_start();
     </form>
     </div>
     <p class="error-validation template"></p>
-<script src="../Hanna Kuppas/js/scriptRegistro.js"></script>
+<script src="../REPOSITORIOPI/Hanna Kuppas/CodigosJavaCript/scriptRegistro.js"></script>
 </body>
 </html>
