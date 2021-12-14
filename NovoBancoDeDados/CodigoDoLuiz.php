@@ -45,6 +45,6 @@ session_start();
     </form>
     </div>
     <p class="error-validation template"></p>
-<script src="../REPOSITORIOPI/Hanna Kuppas/CodigosJavaCript/scriptRegistro.js"></script>
+<script src="../REPOSITORIOPI/Hanna Kuppas/CodigosJavaScript/scriptRegistro.js"></script>
 </body>
 </html>
