@@ -40,7 +40,7 @@ session_start();
         <input id="btn-submit" type="submit" value="Registrar">
         </div>
         <div>
-            <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui</a></label>
+            <label>Já tem uma conta no site? <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaDeLoginHTML.html">Clique aqui</a></label>
         </div>
     </form>
     </div>
