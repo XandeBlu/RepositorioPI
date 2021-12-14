@@ -3,7 +3,7 @@ session_start();
 ?>
 <head>
 <meta charset="UTF-8">
-<link href="../REPOSITORIOPI/CodigosCSS/styleRegistro.css" rel="stylesheet">
+<link href="../Hanna Kuppas/css/styleRegistro.css" rel="stylesheet">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
 <title>Cadastro</title>
 
@@ -40,11 +40,11 @@ session_start();
         <input id="btn-submit" type="submit" value="Registrar">
         </div>
         <div>
-            <label>Já tem uma conta no site? <a href="../REPOSITORIOPI/Hanna Kuppas/CodigosHTML/PaginaDeLoginHTML.html">Clique aqui</a></label>
+            <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui</a></label>
         </div>
     </form>
     </div>
     <p class="error-validation template"></p>
-<script src="../REPOSITORIOPI/Hanna Kuppas/CodigosJavaScript/scriptRegistro.js"></script>
+<script src="../Hanna Kuppas/js/scriptRegistro.js"></script>
 </body>
 </html>
