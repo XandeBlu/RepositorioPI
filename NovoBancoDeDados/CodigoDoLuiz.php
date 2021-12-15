@@ -3,7 +3,7 @@ session_start();
 ?>
 <head>
 <meta charset="UTF-8">
-<link href="../HANNA KUPPAS/css/styleRegistro.css" rel="stylesheet">
+<link href="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\CodigosCSS\styleRegistro.css" rel="stylesheet">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
 <title>Cadastro</title>
 
@@ -13,10 +13,11 @@ session_start();
     <h1>Cadastre-se para acessar o sistema.</h1>
     <?php
     if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
-		}
-        ?>
+		echo $_SESSION['msg'];
+		unset($_SESSION['msg']);
+	}
+    ?>
+  
     <form id="register-form" method="POST" action="Processa.php">
         <div class="full-box">
         <label for="email">E-mail</label>
@@ -46,11 +47,11 @@ session_start();
         <input id="btn-submit" type="submit" value="Registrar">
         </div>
         <div>
-            <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui</a></label>
+            <label>Já tem uma conta no site? <a href="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\CodigosHTML\PaginaDeLoginHTML.html">Clique aqui</a></label>
         </div>
     </form>
     </div>
     <p class="error-validation template"></p>
-<script src="../HANNA KUPPAS/js/scriptRegistro.js"></script>
+<script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\CodigosJavaScript\scriptRegistro.js"></script>
 </body>
 </html>

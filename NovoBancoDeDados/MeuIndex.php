@@ -21,7 +21,7 @@ session_start();
 			<label>Sobrenome: </label>
 			<input type="text" name="sobrenome" placeholder="Digite o Sobrenome"><br><br>
 			<label>Senha: </label>
-			<input type="text" name="Senha" placeholder="Digite a Senha"><br><br>
+			<input type="text" name="senha" placeholder="Digite a Senha"><br><br>
 			
 			<label>E-mail: </label>
 			<input type="email" name="email" placeholder="Digite o seu melhor e-mail"><br><br>
