@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const User = require('./model/usuario');
+const User = require('');
 
 app.use(express.json());
 
