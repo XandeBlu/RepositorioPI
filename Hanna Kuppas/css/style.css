@@ -57,7 +57,7 @@ section.sobre{
 }
 
 .texto-sobre{
-    margin-top:100px;
+    margin-top:-50px;
 
 }
 
@@ -93,11 +93,4 @@ section.sobre{
     height: 1300px;
     border-radius:50%;
     background-color: indianred;
-}
-
-.marca{
-    position: relative;
-    bottom: 190px;
-    right: -60px;
-    border-radius: 50%;
 }
