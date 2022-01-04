@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("Conexao.php");
+include_once('Conexao.php');
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
