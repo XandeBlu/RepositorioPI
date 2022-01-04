@@ -94,3 +94,10 @@ section.sobre{
     border-radius:50%;
     background-color: indianred;
 }
+
+.marca{
+    position: relative;
+    bottom: 190px;
+    right: -60px;
+    border-radius: 50%;
+}
