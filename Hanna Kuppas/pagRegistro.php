@@ -1,3 +1,19 @@
+<?php
+if(isset($_POST['submit'])){
+    include_once('Conexao.php');
+    $Nome = $_POST['name'];
+    $Sobrenome = $_POST['lastname'];
+    $Senha = $_POST['password'];
+    $Email = $_POST['email'];
+
+  $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+   VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -22,7 +38,7 @@
         </header>
         <div id="main-container">
         <h1>Cadastre-se para acessar o sistema.</h1>
-        <form id="register-form" action="">
+        <form action="pagRegistro.php" id="register-form"  method="POST">
             <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
@@ -48,7 +64,7 @@
             <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso.</a></label>
             </div>
             <div class="full-box">
-            <input id="btn-submit" type="submit" value="Registrar">
+            <input id="btn-submit" type="submit" name="submit" value="Registrar">
             </div>
             <div>
                 <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui.</a></label>
@@ -56,6 +72,6 @@
         </form>
         </div>
         <p class="error-validation template"></p>
-    <script src="../Hanna Kuppas/js/scriptRegistro.js"></script>
+    <script src="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>
