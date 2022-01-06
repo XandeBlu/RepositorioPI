@@ -147,9 +147,9 @@ section.sobre{
     margin-left: 0;
 }
 
-#slide2:checked ~ .s1 {
+/** #slide2:checked ~ .s1 {
     margin-left: -21.3%;
-}
+} **/
 
 #slide3:checked ~ .s1 {
     margin-left: -21.1%;
