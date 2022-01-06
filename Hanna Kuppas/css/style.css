@@ -57,7 +57,7 @@ section.sobre{
 }
 
 .texto-sobre{
-    margin-top:100px;
+    margin-top:-50px;
 
 }
 
@@ -96,13 +96,13 @@ section.sobre{
 }
 
 .content{
-    height: 520px;
-    width: 935px;
+    height: 320px;
+    width: 735px;
     border-radius: 20px;
     overflow: hidden;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 35%;
     transform: translate( -50%, -50%);
 }
 
@@ -148,13 +148,13 @@ section.sobre{
 }
 
 #slide2:checked ~ .s1 {
-    margin-left: -20%;
+    margin-left: -21.4%;
 }
 
 #slide3:checked ~ .s1 {
-    margin-left: -40%;
+    margin-left: -41.4%;
 }
 
 #slide4:checked ~ .s1 {
-    margin-left: -60%;
+    margin-left: -61.4%;
 }
