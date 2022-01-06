@@ -148,13 +148,13 @@ section.sobre{
 }
 
 #slide2:checked ~ .s1 {
-    margin-left: -21.4%;
+    margin-left: -21.3%;
 }
 
 #slide3:checked ~ .s1 {
-    margin-left: -21.4%;
+    margin-left: -21.1%;
 }
 
 #slide4:checked ~ .s1 {
-    margin-left: -41.4%;
+    margin-left: -41.3%;
 }
