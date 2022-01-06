@@ -96,7 +96,7 @@ section.sobre{
 }
 
 .content{
-    height: 320px;
+    height: 370px;
     width: 735px;
     border-radius: 20px;
     overflow: hidden;
@@ -152,9 +152,9 @@ section.sobre{
 }
 
 #slide3:checked ~ .s1 {
-    margin-left: -41.4%;
+    margin-left: -21.4%;
 }
 
 #slide4:checked ~ .s1 {
-    margin-left: -61.4%;
+    margin-left: -41.4%;
 }
