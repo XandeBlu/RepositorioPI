@@ -96,12 +96,12 @@ section.sobre{
 }
 
 .content{
-    height: 370px;
+    height: 375px;
     width: 735px;
     border-radius: 20px;
     overflow: hidden;
     position: absolute;
-    top: 70%;
+    top: 77%;
     left: 35%;
     transform: translate( -50%, -50%);
 }
@@ -125,6 +125,10 @@ section.sobre{
 
 .bar:hover {
     background-color: #fff;
+}
+
+input{
+    display: none;
 }
 
 .slides{
@@ -152,9 +156,9 @@ section.sobre{
 } **/
 
 #slide3:checked ~ .s1 {
-    margin-left: -21.1%;
+    margin-left: -20%;
 }
 
 #slide4:checked ~ .s1 {
-    margin-left: -41.3%;
+    margin-left: -40%;
 }
