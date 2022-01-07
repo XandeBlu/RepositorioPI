@@ -1,4 +1,13 @@
-<html>
+<?php
+    unset($_SESSION['email']);    
+    unset($_SESSION['senha']); 
+    header('Location: index.php');
+    print_r('Sessão destruida');
+   
+   ?>
+
+   <!-- esse código html não está sendo rodado-->
+ <html>
     <head>
         <!-- tittle>Hanna Kuppas</tittle -->
         <link href="css/styleAgenda.css" rel="stylesheet">

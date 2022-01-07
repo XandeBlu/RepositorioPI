@@ -1,3 +1,17 @@
+<?php
+if(isset($_POST['submit'])){
+    include_once('Conexao.php');
+    $Nome = $_POST['name'];
+    $Sobrenome = $_POST['lastname'];
+    $Senha = $_POST['password'];
+    $Email = $_POST['email'];
+
+  $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+   VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -13,12 +27,12 @@
             <div class="center">
                 <div class="logo"><img src=""></div>
                 <div class="menu">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.html">Agende</a>
-                    <a href="../Hanna Kuppas/pagLogin.html">Login</a>
+                    <a href="pagAgenda.php">Agende</a>
+                    <a href="../Hanna Kuppas/pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.html">Sair</a>
+                    <!--<a href="pagSair.html">Sair</a>-->
                 </div>
             </div>
         </header>
@@ -53,11 +67,11 @@
             <input id="btn-submit" type="submit" name="submit" value="Registrar">
             </div>
             <div>
-                <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.html">Clique aqui.</a></label>
+                <label>Já tem uma conta no site? <a href="../Hanna Kuppas/pagLogin.php">Clique aqui.</a></label>
             </div>
         </form>
         </div>
         <p class="error-validation template"></p>
-    <script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
+    <script src="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>

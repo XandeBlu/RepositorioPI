@@ -12,12 +12,12 @@
             <div class="center">
                 <div class="logo"><img src=""></div>
                 <div class="menu">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.html">Agende</a>
-                    <a href="../Hanna Kuppas/pagLogin.html">Login</a>
+                    <a href="pagAgenda.php">Agende</a>
+                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.html">Sair</a>
+                    <a href="pagSair.php">Sair</a>
                 </div>
             </div>
         </header>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="icone">
-                <img src="img/Icone.jpg" style="border-radius: 50%;">
+                <!-- img src="img/Icone.jpg" -->
             </div>
 
             <div class="center">
@@ -40,41 +40,6 @@
                 </div>
             </div>
         </section>
-
-        <div class="content">
-            <div class="slides">
-                <input type="radio" name="slide" id="slide1">
-                <!-- input type="radio" name="slide" id="slide2" -->
-                <input type="radio" name="slide" id="slide3">
-                <input type="radio" name="slide" id="slide4">
-
-                <div class="slide s1">
-                    <img src="img/LogoDois.jpeg" alt="">
-                </div>
-
-                <!-- div class="slide">
-                    <img src="img/Balcao.jpeg" alt="">
-                </div -->
-
-                <div class="slide">
-                    <img src="img/BalcaoDois.jpeg" alt="">
-                </div>
-
-                <div class="slide">
-                    <img src="img/Quadros.jpeg" alt="">
-                </div>
-
-            </div>
-
-            <div class="navigation">
-                <label for="slide1"></label>
-                <!-- label for="slide2"></label -->
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-            </div>
-
-        </div>
-
     </body>
 
 
