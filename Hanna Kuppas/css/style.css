@@ -96,8 +96,8 @@ section.sobre{
 }
 
 .content{
-    height: 375px;
-    width: 735px;
+    height: 356px;
+    width: 612px;
     border-radius: 20px;
     overflow: hidden;
     position: absolute;
@@ -151,14 +151,26 @@ input{
     margin-left: 0;
 }
 
-/** #slide2:checked ~ .s1 {
-    margin-left: -21.3%;
-} **/
-
-#slide3:checked ~ .s1 {
+#slide2:checked ~ .s1 {
     margin-left: -20%;
 }
 
-#slide4:checked ~ .s1 {
+#slide3:checked ~ .s1 {
     margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -100%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -120%;
 }
