@@ -1,15 +1,16 @@
 <?php
+    session_start();
     unset($_SESSION['email']);    
     unset($_SESSION['senha']); 
-    header('Location: index.php');
-    print_r('Sessão destruida');
+    header('Location: pagLogin.php');
+    
    
    ?>
 
    <!-- esse código html não está sendo rodado-->
- <html>
+<!-- <html>
     <head>
-        <!-- tittle>Hanna Kuppas</tittle -->
+         tittle>Hanna Kuppas</tittle 
         <link href="css/styleAgenda.css" rel="stylesheet">
         <meta name="viewport" content="with=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Home</title>
@@ -23,7 +24,7 @@
                     <a href="pagProcedimentos.html">Procedimentos</a>
                     <a href="pagAgenda.html">Agende</a>
                     <a href="../Hanna Kuppas/pagLogin.html">Login</a>
-                    <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
+                     a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a 
                     <a href="pagSair.html">Sair</a>
                 </div>
             </div>
@@ -44,8 +45,8 @@
         </div>
 
         <div class="extras">
-            <!-- Div do Social Media-->
+             Div do Social Media
         </div>
 
     </body>
-</html>
+</html>-->
