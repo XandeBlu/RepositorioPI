@@ -6,32 +6,27 @@
         <meta name="viewport" content="with=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Home</title>
     </head>
-
     <body>
         <header>
             <div class="center">
                 <div class="logo"><img src=""></div>
                 <div class="menu">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.html">Agende</a>
-                    <a href="../Hanna Kuppas/pagLogin.html">Login</a>
+                    <a href="pagAgenda.php">Agende</a>
+                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.html">Sair</a>
+                    <a href="pagSair.php">Sair</a>
                 </div>
             </div>
         </header>
-
         <section class="sobre">
-
             <div class="extras">
                 <!-- Div do Social Media-->
             </div>
-
             <div class="icone">
                 <img src="img/Icone.jpg" style="border-radius: 50%;">
             </div>
-
             <div class="center">
                 <div class="texto-sobre">
                     <h1 style="color: #323232;">Seja Bem Vindo<br>A Agenda Digital<br><span style="color: indianred">HK Estética</span></h1>
@@ -40,6 +35,7 @@
                 </div>
             </div>
         </section>
+<<<<<<< Updated upstream:Hanna Kuppas/index.html
 
         <div class="content">
             <div class="slides">
@@ -99,4 +95,7 @@
 
     </body>
 
+=======
+    </body>
+>>>>>>> Stashed changes:Hanna Kuppas/index.php
 </html>

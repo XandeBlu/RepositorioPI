@@ -1,4 +1,20 @@
+<?php
+session_start();
+    //print_r($_SESSION);
+    //print_r('<br>');
+    //print_r('INICIOU SESSÃO');
+    if((!isset($_SESSION['email'])==true) and (!isset($_SESSION['senha'])==true))
+    {
+   unset($_SESSION['email']);    
+   unset($_SESSION['senha']);  
+   header('Location: pagLogin.php');
+    }
+    $logado = $_SESSION['email'];
+
+    ?>
+
 <html>
+
     
     <head>
         <!-- tittle>Hanna Kuppas</tittle -->
@@ -11,12 +27,12 @@
         <header>
             <div class="center">
                 <div class="menu">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.html">Agende</a>
-                    <a href="../Hanna Kuppas/pagLogin.html">Login</a>
+                    <a href="pagAgenda.php">Agende</a>
+                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.html">Sair</a>
+                   <!-- <a href="pagSair.html">Sair</a> -->
                 </div>
             </div>
         </header>
