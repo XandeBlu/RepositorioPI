@@ -1,3 +1,17 @@
+<?php
+if(isset($_POST['submit'])){
+    include_once('Conexao.php');
+    $Nome = $_POST['name'];
+    $Sobrenome = $_POST['lastname'];
+    $Senha = $_POST['password'];
+    $Email = $_POST['email'];
+
+  $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+   VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -58,6 +72,6 @@
         </form>
         </div>
         <p class="error-validation template"></p>
-    <script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
+    <script src="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>
