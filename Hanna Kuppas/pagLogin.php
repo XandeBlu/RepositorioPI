@@ -23,7 +23,7 @@
     </header>
     <div id="main-container">
         <h1>Faça o login para utilizar o sistema.</h1>
-        <form id="login-form" action=""></form>
+        <form id="login-form" action="testelogin.php" method="POST">
         <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
@@ -38,6 +38,7 @@
         <div>
             <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna Kuppas/pagRegistro.php">Clique aqui.</a></label>
         </div>
+        </form>
         <p class="error-validation template"></p>
         <script src="../Hanna Kuppas/js/jsLogin.js"></script>
     </div>
