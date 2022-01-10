@@ -12,12 +12,12 @@
         <div class="center">
             <div class="logo"><img src=""></div>
             <div class="menu">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="pagProcedimentos.html">Procedimentos</a>
-                <a href="pagAgenda.html">Agende</a>
-                <a href="../Hanna Kuppas/pagLogin.html">Login</a>
-                <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                <a href="pagSair.html">Sair</a>
+                <a href="pagAgenda.php">Agende</a>
+                <a href="pagLogin.php">Login</a>
+                <!-- a href="../Hanna Kuppas/pagRegistro.php"> Cadastro</a -->
+                <a href="pagSair.php">Sair</a>
             </div>
         </div>
     </header>
@@ -36,7 +36,7 @@
             <input id="btn-submit" type="submit" value="Login">
         </div>
         <div>
-            <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna Kuppas/pagRegistro.html">Clique aqui.</a></label>
+            <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna Kuppas/pagRegistro.php">Clique aqui.</a></label>
         </div>
         <p class="error-validation template"></p>
         <script src="../Hanna Kuppas/js/jsLogin.js"></script>
