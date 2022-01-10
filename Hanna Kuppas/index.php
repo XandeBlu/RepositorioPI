@@ -75,9 +75,9 @@
                     <img src="img/ProdutoDois.jpeg" alt="">
                 </div>
 
-                <div class="slide">
+                <!-- div class="slide">
                     <img src="img/Cartao.jpeg" alt="">
-                </div>
+                </div -->
 
             </div>
 
