@@ -2,7 +2,7 @@
     
     <head>
         <!-- tittle>Hanna Kuppas</tittle -->
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <meta name="viewport" content="with=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Home</title>
     </head>
