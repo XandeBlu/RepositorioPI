@@ -28,7 +28,7 @@ session_start();
             <div class="center">
                 <div class="menu">
                     <a href="index.php">Home</a>
-                    <a href="pagProcedimentos.html">Procedimentos</a>
+                   <!-- a href="pagProcedimentos.html">Procedimentos</a -->
                     <a href="pagAgenda.php">Agende</a>
                     <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->

@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
                 <div class="logo"><img src=""></div>
                 <div class="menu">
                     <a href="index.php">Home</a>
-                    <a href="pagProcedimentos.html">Procedimentos</a>
+                    <!-- a href="pagProcedimentos.html">Procedimentos</a -->
                     <a href="pagAgenda.php">Agende</a>
                     <a href="../Hanna Kuppas/pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->

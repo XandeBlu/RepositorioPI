@@ -14,7 +14,7 @@
                 <div class="logo"><img src=""></div>
                 <div class="menu">
                     <a href="index.php">Home</a>
-                    <a href="pagProcedimentos.html">Procedimentos</a>
+                    <!-- a href="pagProcedimentos.html">Procedimentos</a -->
                     <a href="pagAgenda.php">Agende</a>
                     <a href="pagLogin.php">Login</a>
                     <a href="pagSair.php">Sair</a>
