@@ -72,6 +72,6 @@ if(isset($_POST['submit'])){
         </form>
         </div>
         <p class="error-validation template"></p>
-    <script src="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\js\scriptRegistro.js"></script>
+    <script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>

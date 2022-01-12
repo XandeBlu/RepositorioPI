@@ -30,7 +30,7 @@ session_start();
                     <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
                     <a href="pagAgenda.php">Agende</a>
-                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
+                    <a href="pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
                     <a href="pagSair.html">Sair</a> 
                 </div>
