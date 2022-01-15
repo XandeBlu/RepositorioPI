@@ -35,7 +35,6 @@
                 </div>
             </div>
         </section>
-<<<<<<< Updated upstream:Hanna Kuppas/index.html
 
         <div class="content">
             <div class="slides">
@@ -95,7 +94,4 @@
 
     </body>
 
-=======
-    </body>
->>>>>>> Stashed changes:Hanna Kuppas/index.php
 </html>
