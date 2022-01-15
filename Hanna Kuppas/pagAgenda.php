@@ -160,8 +160,8 @@ include_once('Conexao.php');
 
                 <tbody>
                 <?php
-                $quantidade = 10;
-                $pagina (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
+               // $quantidade = 10;
+               // $pagina (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
                         while($user_data = mysqli_fetch_assoc($resultado))
                         {
                             echo "<tr>";
