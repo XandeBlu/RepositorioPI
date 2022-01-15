@@ -33,7 +33,7 @@
             <input type="password" name="password" id="password" placeholder="Digite sua senha" data-password-validate data-required>
         </div>
         <div class="full-box">
-            <input id="btn-submit" type="submit" value="Login">
+            <input id="btn-submit" type="submit" value="Login" name="submit">
         </div>
         <div>
             <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna Kuppas/pagRegistro.php">Clique aqui.</a></label>
