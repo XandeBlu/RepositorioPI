@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('Conexao.php');
     //print_r($_SESSION);
     //print_r('<br>');
     //print_r('INICIOU SESSÃO');
@@ -11,7 +12,22 @@ session_start();
     }
     $logado = $_SESSION['email'];
 
-    ?>
+    $sql ="SELECT * FROM procedimentos";
+    $resultado = $conn->query($sql);
+
+    if(isset($_POST['submit_agenda'])){
+        include_once('Conexao.php');
+        $Procedimento = $_POST['Procedimento'];
+        $Data = $_POST['Data'];
+        $Horario = $_POST['Horario'];
+
+    
+      $result = mysqli_query($conn, "INSERT INTO procedimentos (Procedimento, DiaMes, Horario)
+       VALUES ('$Procedimento','$Data','$Horario')");
+    }
+
+
+?>
 
 <html>
 
@@ -30,9 +46,9 @@ session_start();
                     <a href="index.php">Home</a>
                     <a href="pagProcedimentos.html">Procedimentos</a>
                     <a href="pagAgenda.php">Agende</a>
-                    <a href="pagLogin.php">Login</a>
+                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
                     <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.html">Sair</a> 
+                   <!-- <a href="pagSair.html">Sair</a> -->
                 </div>
             </div>
         </header>
@@ -46,9 +62,9 @@ session_start();
         <br>
 
         <div class="search-box">
-            <form style="text-align: center;">
+            <form style="text-align: center;" method="POST" action="pagAgenda.php">
                 <label style="color: #323232;"><b>Procedimento:</b></label>
-                    <select>
+                    <select name="Procedimento">
                         <option>Modeladora</option>
                         <option>Termoterapia</option>
                         <option>Drenagem Linfática</option>
@@ -69,7 +85,7 @@ session_start();
                     </select>
 
                     <label style="color: #323232;"><b>Data:</b></label>
-                    <select>
+                    <select name="Data">
                         <option>01/01</option>
                         <option>02/01</option>
                         <option>03/01</option>
@@ -105,7 +121,7 @@ session_start();
                     </select>
 
                     <label style="color: #323232;"><b>Horário:</b></label>
-                    <select>
+                    <select name="Horario">
                         <option>12:00-13:00</option>
                         <option>13:00-14:00</option>
                         <option>14:00-15:00</option>
@@ -113,12 +129,13 @@ session_start();
                         <option>16:00-17:00</option>
                         <option>17:00-18:00</option>
                     </select>
+                   
+                    
+                    <input id="btn-submit" type="submit" name="submit_agenda" value="Agendar">
             </form >
-        </div>
-
-        <div class="texto-sobre">
-            <button>AGENDE</button>
-        </div>
+            
+         </div>
+        
 
         <br>
 
@@ -127,87 +144,36 @@ session_start();
         <br>
 
         <div class="table">
-            <table style="text-align: center;">
+            <table style="text-align: center;" class="table">
                 <!-- caption>Seus Agendamentos</caption -->
                 <thead>
-                    <th>
-                        Procedimento
-                    </th>
-                    <th>
-                        Data
-                    </th>
-                    <th>
-                        Horário
-                    </th>
+                <tr>
+                    <th scope="col">Procedimento</th>
+                    <th></th>
+                    <th scope="col">Data</th>
+                    <th></th>
+                    <th scope="col">Horário</th>
+                    <th></th>
+                 </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                </tfoot> 
+
+
+                <tbody>
+                <?php
+                $quantidade = 10;
+                $pagina (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
+                        while($user_data = mysqli_fetch_assoc($resultado))
+                        {
+                            echo "<tr>";
+                            echo "<td>".$user_data['Procedimento']."<td>";
+                            echo "<td>".$user_data['DiaMes']."<td>";
+                            echo "<td>".$user_data['Horario']."<td>";
+                            echo "</tr>";
+
+                        }
+                    ?>
+                
+                </tbody> 
             </table>
             <div class="texto-sobre">
                 <button>CANCELAR HORÁRIO</button>
