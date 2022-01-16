@@ -149,11 +149,11 @@ include_once('Conexao.php');
                 <thead>
                 <tr>
                     <th scope="col">Procedimento</th>
-                    <th></th>
+                    
                     <th scope="col">Data</th>
-                    <th></th>
+                    
                     <th scope="col">Horário</th>
-                    <th></th>
+                    
                  </tr>
                 </thead>
 
@@ -162,12 +162,13 @@ include_once('Conexao.php');
                 <?php
                // $quantidade = 10;
                // $pagina (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
+                 // $inicio = ($quantidade * $pagina) - $quantidade;
                         while($user_data = mysqli_fetch_assoc($resultado))
                         {
                             echo "<tr>";
-                            echo "<td>".$user_data['Procedimento']."<td>";
-                            echo "<td>".$user_data['DiaMes']."<td>";
-                            echo "<td>".$user_data['Horario']."<td>";
+                            echo "<td>".$user_data['Procedimento']."</td>";
+                            echo "<td>".$user_data['DiaMes']."</td>";
+                            echo "<td>".$user_data['Horario']."</td>";
                             echo "</tr>";
 
                         }
