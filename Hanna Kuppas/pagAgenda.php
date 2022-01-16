@@ -12,7 +12,10 @@ include_once('Conexao.php');
     }
     $logado = $_SESSION['email'];
 
-    $sql ="SELECT * FROM procedimentos";
+    $quantidade = 5;
+    $pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
+       $inicio = ($quantidade * $pagina) - $quantidade;
+    $sql ="SELECT * FROM procedimentos LIMIT $inicio, $quantidade";
     $resultado = $conn->query($sql);
 
     if(isset($_POST['submit_agenda'])){
@@ -136,13 +139,17 @@ include_once('Conexao.php');
             
          </div>
         
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
 
         <h2 style="text-align: center;">Seus Agendamentos</h2>
 
         <br>
-
+        <br>
         <div class="table">
             <table style="text-align: center;" class="table">
                 <!-- caption>Seus Agendamentos</caption -->
@@ -160,9 +167,7 @@ include_once('Conexao.php');
 
                 <tbody>
                 <?php
-               // $quantidade = 10;
-               // $pagina (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
-                 // $inicio = ($quantidade * $pagina) - $quantidade;
+              
                         while($user_data = mysqli_fetch_assoc($resultado))
                         {
                             echo "<tr>";
@@ -176,9 +181,33 @@ include_once('Conexao.php');
                 
                 </tbody> 
             </table>
-            <div class="texto-sobre">
-                <button>CANCELAR HORÁRIO</button>
-            </div>
-        </div>
-    </body>
+        <?php
+        $sqlTotal = "SELECT procedimento FROM procedimentos";
+        $qrTotal = mysqli_query($conn,$sqlTotal) or die (mysqli_error($conn));
+        $numTotal= mysqli_num_rows($qrTotal);
+        $totalPagina = ceil($numTotal/$quantidade);
+
+        echo "Total de Registros: $numTotal <br>";
+        
+        echo '<a href="?menuop=contatos&pagina=1">Primeira Pagina </a>';
+
+        if($pagina>6){
+            ?>
+            <li class="page-item"><a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina-1?>"><<</a></li>
+            <?php
+        }
+
+
+        for($i=1;$i<=$totalPagina;$i++){
+             
+            if($i==$pagina){
+                echo $i;
+            }else{
+                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a>";
+
+            }
+        }
+        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">Ultima Página</a>";
+
+        ?>
 </html>
