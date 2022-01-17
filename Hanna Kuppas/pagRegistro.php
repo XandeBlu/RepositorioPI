@@ -5,6 +5,7 @@ if(isset($_POST['submit'])){
     $Sobrenome = $_POST['lastname'];
     $Senha = $_POST['password'];
     $Email = $_POST['email'];
+    $confSenha = $_POST['passconfirmation'];
 
   $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
    VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
