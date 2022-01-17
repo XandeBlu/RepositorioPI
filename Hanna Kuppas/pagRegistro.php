@@ -7,13 +7,25 @@ if(isset($_POST['submit'])){
     $Email = $_POST['email'];
     $confSenha = $_POST['passconfirmation'];
 
-  $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
-   VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+  
+    $Senha = str_replace(' ','',$Senha);
+    $Email = str_replace(' ','',$Email);
+    $confSenha = str_replace(' ','',$confSenha);
+
+    $tamSenha = strlen($Senha);
+
+    if(($Nome == null)||($Sobrenome == null)||($Senha == null)||($Email == null)){
+        echo "<script> alert('Digite as informações pedidas');</script>";
+    }elseif($tamSenha < 8){
+        echo "<script> alert('A senha deve ter no minimo 8 caracteres');</script>";
+    }elseif($Senha != $confSenha){
+        echo "<script> alert('As duas senha devem ser iguais');</script>";
+    }else{
+        $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+        VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+    }
 }
-
-
 ?>
-
 
 <!DOCTYPE html>
 <head>
