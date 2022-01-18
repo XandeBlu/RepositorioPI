@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+html,body{
+    height:100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+h2{
+  color: #323232;
+}
+  
+header{
+    height: 2%;
+    padding:20px 0;
+}
+  
+.logo{
+    width:50%;
+}
+  
+.menu{
+    width:100%;
+    text-align: right;
+}
+  
+.menu a{
+    color: #323232;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right:15px;
+    font-size: 125%;
+}
+  
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+}
+  
+.extras{
+    position: absolute;
+    bottom: -500px;
+    right: -500px;
+    width: 1300px;
+    height: 1300px;
+    border-radius:50%;
+    background-color: indianred;
+}
+
+.search-box{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: indianred;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-btn{
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: indianred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+}
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width:0px;
+}
+.search-box:hover > .search-txt{
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+  background: white;
+}
+
+.texto-sobre{
+  margin-top:100px;
+  text-align: center;
+}
+
+.texto-sobre h1{
+  font-size:50px;
+
+}
+
+.texto-sobre p{
+  margin:20px 0;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+.texto-sobre button{
+  border: 0;
+  background-color:indianred;
+  color:white;
+  border-radius:10px;
+  width:100px;
+  height:30px;
+  cursor: pointer;
+}
+
+table, td, th{
+  border: 5px solid indianred
+}
+
+table{
+  width: 70%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin:auto;
+}
+
+td, th{
+  height: 100px;
+}
+
+th{
+  background-color: indianred;
+  color: whitesmoke
+}
+
+tr:nth-child(even){
+  background: #ddd;
+}
