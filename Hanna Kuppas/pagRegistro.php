@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
         </header>
         <div id="main-container">
         <h1>Cadastre-se para acessar o sistema.</h1>
-        <form action="pagRegistro.php" id="register-form"  method="POST">
+        <form action="pagLogin.php" id="register-form"  method="POST">
             <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
@@ -85,6 +85,10 @@ if(isset($_POST['submit'])){
             <div class="half-box">
             <label for="passconfirmation">Confirmação de senha</label>
             <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
+            </div>
+            <div class="half-box">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="XcpfX" placeholder="Digite seu cpf sem pontos ou espaçamentos " >
             </div>
             <div>
             <input type="checkbox" name="agreement" id="agreement">
