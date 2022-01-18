@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $Senha = $_POST['password'];
     $Email = $_POST['email'];
     $confSenha = $_POST['passconfirmation'];
-    $CPF = $_POST['cpf'];
+    //$CPF = $_POST['cpf'];
 
    
     
@@ -15,10 +15,10 @@ if(isset($_POST['submit'])){
     $Senha = str_replace(' ','',$Senha); 
     $Email = str_replace(' ','',$Email);
     $confSenha = str_replace(' ','',$confSenha);
-    $CPF = str_replace(' ','',$CPF); 
+    //$CPF = str_replace(' ','',$CPF); 
 
     $tamSenha = strlen($Senha);
-    $TamCPF = strlen($CPF);
+    //$TamCPF = strlen($CPF);
 
     if(($Nome == null)||($Sobrenome == null)||($Senha == null)||($Email == null)){
         echo "<script> alert('Digite as informações pedidas');</script>";
@@ -26,16 +26,16 @@ if(isset($_POST['submit'])){
         echo "<script> alert('A senha deve ter no minimo 8 caracteres');</script>";
     }elseif($Senha != $confSenha){
         echo "<script> alert('As duas senha devem ser iguais');</script>";
-
-    }elseif ($TamCPF != 11) {
-        echo "<script> alert('Escreva um cpf válido com 11 caracteres');</script>";
     }
+   // }elseif ($TamCPF != 11) {
+    //    echo "<script> alert('Escreva um cpf válido com 11 caracteres');</script>";
+    //}
     else {
        
     
-        $result = mysqli_query($conn, "INSERT INTO clientes (cpf,email, nome, sobrenome, senha )
-        VALUES ('$CPF','$Email','$Nome','$Sobrenome','$Senha')");
-        $id = ['id'];
+        $result = mysqli_query($conn, "INSERT INTO clientes (email, nome, sobrenome, senha )
+        VALUES ('$Email','$Nome','$Sobrenome','$Senha')");
+        $id = $_GET['id'];
         
     }
 }
@@ -86,10 +86,7 @@ if(isset($_POST['submit'])){
             <label for="passconfirmation">Confirmação de senha</label>
             <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
             </div>
-            <div class="half-box">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="XcpfX" placeholder="Digite seu cpf sem pontos ou espaçamentos " >
-            </div>
+           
             <div>
             <input type="checkbox" name="agreement" id="agreement">
             <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso.</a></label>
