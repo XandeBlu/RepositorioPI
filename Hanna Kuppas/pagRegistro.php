@@ -6,15 +6,19 @@ if(isset($_POST['submit'])){
     $Senha = $_POST['password'];
     $Email = $_POST['email'];
     $confSenha = $_POST['passconfirmation'];
+    $CPF = $_POST['cpf'];
+
    
     
 
   
-    $Senha = str_replace(' ','',$Senha);
+    $Senha = str_replace(' ','',$Senha); 
     $Email = str_replace(' ','',$Email);
     $confSenha = str_replace(' ','',$confSenha);
+    $CPF = str_replace(' ','',$CPF); 
 
     $tamSenha = strlen($Senha);
+    $TamCPF = strlen($CPF);
 
     if(($Nome == null)||($Sobrenome == null)||($Senha == null)||($Email == null)){
         echo "<script> alert('Digite as informações pedidas');</script>";
@@ -22,9 +26,15 @@ if(isset($_POST['submit'])){
         echo "<script> alert('A senha deve ter no minimo 8 caracteres');</script>";
     }elseif($Senha != $confSenha){
         echo "<script> alert('As duas senha devem ser iguais');</script>";
-    }else{
-        $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
-        VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
+
+    }elseif ($TamCPF != 11) {
+        echo "<script> alert('Escreva um cpf válido com 11 caracteres');</script>";
+    }
+    else {
+       
+    
+        $result = mysqli_query($conn, "INSERT INTO clientes (cpf,email, nome, sobrenome, senha )
+        VALUES ('$CPF','$Email','$Nome','$Sobrenome','$Senha')");
         $id = ['id'];
         
     }
