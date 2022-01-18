@@ -8,9 +8,6 @@ if(isset($_POST['submit'])){
     $confSenha = $_POST['passconfirmation'];
     //$CPF = $_POST['cpf'];
 
-   
-    
-
   
     $Senha = str_replace(' ','',$Senha); 
     $Email = str_replace(' ','',$Email);
@@ -33,7 +30,7 @@ if(isset($_POST['submit'])){
     else {
        
     
-        $result = mysqli_query($conn, "INSERT INTO clientes (email, nome, sobrenome, senha )
+        $result = mysqli_query ($conn, "INSERT INTO clientes (Email, Nome, Sobrenome, Senha )
         VALUES ('$Email','$Nome','$Sobrenome','$Senha')");
         $id = $_GET['id'];
         
@@ -100,6 +97,6 @@ if(isset($_POST['submit'])){
         </form>
         </div>
         <p class="error-validation template"></p>
-    <script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
+    //<script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>

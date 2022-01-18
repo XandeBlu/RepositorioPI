@@ -25,7 +25,7 @@ include_once('Conexao.php');
         $Horario = $_POST['Horario'];
 
     
-      $result = mysqli_query($conn, "INSERT INTO procedimentos (procedimento, DiaMes, Horario)
+      $result_proc = mysqli_query($conn, "INSERT INTO procedimentos (procedimento, DiaMes, Horario)
        VALUES ('$Procedimento','$Data','$Horario')");
     }
 
