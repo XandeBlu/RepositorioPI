@@ -6,16 +6,13 @@ if(isset($_POST['submit'])){
     $Senha = $_POST['password'];
     $Email = $_POST['email'];
     $confSenha = $_POST['passconfirmation'];
-    //$CPF = $_POST['cpf'];
 
-  
-    $Senha = str_replace(' ','',$Senha); 
+    
+    $Senha = str_replace(' ','',$Senha);
     $Email = str_replace(' ','',$Email);
     $confSenha = str_replace(' ','',$confSenha);
-    //$CPF = str_replace(' ','',$CPF); 
 
     $tamSenha = strlen($Senha);
-    //$TamCPF = strlen($CPF);
 
     if(($Nome == null)||($Sobrenome == null)||($Senha == null)||($Email == null)){
         echo "<script> alert('Digite as informações pedidas');</script>";
@@ -23,17 +20,9 @@ if(isset($_POST['submit'])){
         echo "<script> alert('A senha deve ter no minimo 8 caracteres');</script>";
     }elseif($Senha != $confSenha){
         echo "<script> alert('As duas senha devem ser iguais');</script>";
-    }
-   // }elseif ($TamCPF != 11) {
-    //    echo "<script> alert('Escreva um cpf válido com 11 caracteres');</script>";
-    //}
-    else {
-       
-    
-        $result = mysqli_query ($conn, "INSERT INTO clientes (Email, Nome, Sobrenome, Senha )
-        VALUES ('$Email','$Nome','$Sobrenome','$Senha')");
-        $id = $_GET['id'];
-        
+    }else{
+        $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+        VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
     }
 }
 ?>
@@ -62,7 +51,7 @@ if(isset($_POST['submit'])){
         </header>
         <div id="main-container">
         <h1>Cadastre-se para acessar o sistema.</h1>
-        <form action="pagLogin.php" id="register-form"  method="POST">
+        <form action="pagRegistro.php" id="register-form"  method="POST">
             <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
@@ -83,7 +72,6 @@ if(isset($_POST['submit'])){
             <label for="passconfirmation">Confirmação de senha</label>
             <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
             </div>
-           
             <div>
             <input type="checkbox" name="agreement" id="agreement">
             <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso.</a></label>
@@ -97,6 +85,6 @@ if(isset($_POST['submit'])){
         </form>
         </div>
         <p class="error-validation template"></p>
-    //<script src="C:\Users\zanin\OneDrive\Documentos\GitHub\RepositorioPI\Hanna Kuppas\js\scriptRegistro.js"></script>
+    <script src="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\js\scriptRegistro.js"></script>
     </body>
 </html>
