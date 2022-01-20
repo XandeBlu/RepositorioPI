@@ -19,8 +19,10 @@ if(mysqli_num_rows($result) < 1)
     //Se o número de linhas com o registro encontrado for menor que 1, ou seja não encontrou...
     //Redireciona devolta para a página de login
     unset($_SESSION['email']);//destrói email e senha anteriores
-    unset($_SESSION['senha']);
-    header('Location : pagLogin.php');
+    unset($_SESSION['password']);
+    header('Location: pagLogin.php');
+    
+    echo "<script> alert('Nenhum Registro encontrado');</script>";
 }
 else{
     //Senão o usuário poderá acessar o sistema
@@ -31,9 +33,9 @@ else{
 }
 
 
-    }
-    else{
+    
+ } else{
         //Não acessa e volta para o Login
-        header ('Location : pagLogin.php');
+        header ('Location: pagLogin.php');
     }
 ?>
