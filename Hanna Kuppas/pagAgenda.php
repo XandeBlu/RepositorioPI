@@ -11,11 +11,14 @@ include_once('Conexao.php');
    header('Location: pagLogin.php');
     }
     $logado = $_SESSION['email'];
+    $consulta = "SELECT id FROM clientes WHERE Email = $logado";
+    $id = $conn->query($consulta);
+    print_r($id);
 
     $quantidade = 5;
     $pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
        $inicio = ($quantidade * $pagina) - $quantidade;
-    $sql ="SELECT * FROM procedimentos LIMIT $inicio, $quantidade";
+    $sql = "SELECT * FROM procedimentos LIMIT $inicio, $quantidade";
     $resultado = $conn->query($sql);
 
     if(isset($_POST['submit_agenda'])){
@@ -169,15 +172,21 @@ include_once('Conexao.php');
 
                 <tbody>
                 <?php
+                
+                $consulta = "SELECT id FROM clientes WHERE Email = $logado";
+                $id = $conn->query($consulta);
+
+                
               
                         while($user_data = mysqli_fetch_assoc($resultado))
                         {
                             echo "<tr>";
+                            
                             echo "<td>".$user_data['Procedimento']."</td>";
                             echo "<td>".$user_data['DiaMes']."</td>";
                             echo "<td>".$user_data['Horario']."</td>";
                             echo "<td>
-                            <a class='btn btn-sm btn-danger' href='DeleteProcedimento.php?id' title='Deletar'>
+                            <a class='btn btn-sm btn-danger' href='DeleteProcedimento.php?id=$id' title='Deletar'>
                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
                                     <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
                                 </svg>

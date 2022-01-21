@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
     }elseif($Senha != $confSenha){
         echo "<script> alert('As duas senha devem ser iguais');</script>";
     }else{
-        $result = mysqli_query($conn, "INSERT INTO clientes (nome, sobrenome, senha, email)
+        $result = mysqli_query($conn, "INSERT INTO clientes (Nome, Sobrenome, Senha, Email)
         VALUES ('$Nome','$Sobrenome','$Senha','$Email')");
     }
 }
