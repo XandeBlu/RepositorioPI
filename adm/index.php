@@ -9,6 +9,8 @@
         $sql = "SELECT * FROM clientes ORDER BY id DESC";
     }
     $result = $conn->query($sql);
+
+    $id_adm = 23;
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +25,10 @@
 <header>
     <div class="center">
         <div class="menu">
-            <a href="index.php">Home</a>
-            <!-- a href="pagProcedimentos.html">Procedimentos</a -->
-            <a href="../adm/AgendaHanna">Agende</a>
-            <a href="../RepositiorioPI-main/Hanna Kuppas/pagLogin.php">Login</a>
-            <a href="../adm/ListaUsu.php">Usuarios</a>
-            <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-            <!-- <a href="pagSair.html">Sair</a> -->
+            <a <?php echo "href='../Hanna_Kuppas/index_id.php?id_usu=$id_adm'"?>>Home</a>
+            <a <?php echo "href='../Hanna_Kuppas/pagAgenda.php?id_usu=$id_adm'";?>>Agende</a>
+            <a <?php echo "href='../adm/index.php'";?>>Usuarios</a>
+            <a href="../Hanna_Kuppas/pagSair.php">Sair</a>
         </div>
     </div>
 </header>
@@ -83,7 +82,7 @@ search.addEventListener("keydown", function(event){
 })
 
 function searchData(){
-    window.location='ListaUsu.php?search='+search.value
+    window.location='index.php?search='+search.value
 }
 </script>
 </html>

@@ -1,46 +1,30 @@
 <?php
 session_start();
 include_once('Conexao.php');
-    //print_r($_SESSION);
-    //print_r('<br>');
-    //print_r('INICIOU SESSÃO');
-    if((!isset($_SESSION['email'])==true) and (!isset($_SESSION['senha'])==true))
-    {
-   unset($_SESSION['email']);    
-   unset($_SESSION['senha']);  
-   header('Location: pagLogin.php');
+    if((!isset($_SESSION['email'])==true) and (!isset($_SESSION['senha'])==true)){
+        unset($_SESSION['email']);    
+        unset($_SESSION['senha']);  
+        header('Location: pagLogin.php');
     }
-    $logado = $_SESSION['email'];
-    $consulta = "SELECT id FROM clientes WHERE Email = $logado";
-    $id = $conn->query($consulta);
-    print_r($id);
 
-    $quantidade = 5;
-    $pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
-       $inicio = ($quantidade * $pagina) - $quantidade;
-    $sql = "SELECT * FROM procedimentos LIMIT $inicio, $quantidade";
+    $id_usu = $_GET['id_usu'];
+    $id_adm = 23; //trocar para o id do user da hanna. obs: tbm mudar la no arquivo de delete
+
+    if($id_usu == $id_adm){
+        $sql = "SELECT * FROM procedimentos ORDER BY DiaMes ASC";
+    }else{
+        $sql = "SELECT * FROM procedimentos WHERE id_usu='$id_usu' ORDER BY DiaMes ASC";
+    }
     $resultado = $conn->query($sql);
-
-    if(isset($_POST['submit_agenda'])){
-        include_once('Conexao.php');
-        $Procedimento = $_POST['Procedimento'];
-        $Data = $_POST['Data'];
-        $Horario = $_POST['Horario'];
-
-    
-      $result_proc = mysqli_query($conn, "INSERT INTO procedimentos (procedimento, DiaMes, Horario)
-       VALUES ('$Procedimento','$Data','$Horario')");
-    }
-
 
 ?>
 
 <html>
 
-    
+    <aside>
     <head>
         <!-- tittle>Hanna Kuppas</tittle -->
-        <link href="css/styleAgenda.css" rel="stylesheet">
+        <link href="../Hanna_Kuppas/css/styleAgenda.css" rel="stylesheet">
         <meta name="viewport" content="with=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Home</title>
     </head>
@@ -49,12 +33,15 @@ include_once('Conexao.php');
         <header>
             <div class="center">
                 <div class="menu">
-                    <a href="index.php">Home</a>
-                    <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.php">Agende</a>
-                    <a href="C:\wamp64\www\UltimoVirtualHost\Hanna Kuppas\pagLogin.php">Login</a>
-                    <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                   <!-- <a href="pagSair.html">Sair</a> -->
+                    <a <?php echo "href='../Hanna_Kuppas/index_id.php?id_usu=$id_usu'"?>>Home</a>
+                    <a <?php echo "href='../Hanna_Kuppas/pagAgenda.php?id_usu=$id_usu'";?>>Agende</a>
+                     <?php if($id_usu == $id_adm){
+                            echo "<a href='../adm/index.php'>Usuarios</a>";
+                            }
+                            ?>
+                    <!--a href="../Hanna_Kuppas/pagLogin.php">Login</a>
+                    a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
+                   <a href="../Hanna_Kuppas/pagSair.php">Sair</a>
                 </div>
             </div>
         </header>
@@ -66,9 +53,34 @@ include_once('Conexao.php');
         <h2 style="text-align: center;">Agende seu procedimento, dia e horário.</h2>
         
         <br>
+        <!--div class="box-search">
 
+            <input type="search" class="form-control w-25" placeholder="Pesquisa" id="pesquisar">
+            <button onclick="searchData()"><img src="../adm/img/Lupa.png" heidth="13px" width="13px"></button>
+
+        </div-->
+
+        <?php
+        /*$user_data = mysqli_fetch_assoc($resultado);
+        $data = $user_data['DiaMes'];
+
+        $sqldata = "SELECT * FROM procedimentos WHERE DiaMes='$data'";
+        $resultData = $conn->query($sqldata);
+        $userDt = mysqli_fetch_assoc($resultData);
+        $dataspec = $userDt['DiaMes'];
+        $horario = $userDt['Horario'];
+
+        if($data == $dataspec){
+            $horarioDb = $user_data['Horario'];
+            if($horario==$horarioDb){
+                print_r($horarioDb);
+                print_r($horario);
+            }
+        }*/
+
+        ?>
         <div class="search-box">
-            <form style="text-align: center;" method="POST" action="pagAgenda.php">
+            <form style="text-align: center;" method="POST" <?php   echo "action='salvarAgendamento.php?id_usu=$id_usu'";?>>
                 <label style="color: #323232;"><b>Procedimento:</b></label>
                     <select name="Procedimento">
                         <option>Modeladora</option>
@@ -91,7 +103,9 @@ include_once('Conexao.php');
                     </select>
 
                     <label style="color: #323232;"><b>Data:</b></label>
-                    <select name="Data">
+                    <!--input type="date" name="Data" -->
+                    <input type="date" name="Data">
+                    <!--select name="Data">
                         <option>01/01</option>
                         <option>02/01</option>
                         <option>03/01</option>
@@ -124,7 +138,7 @@ include_once('Conexao.php');
                         <option>30/01</option>
                         <option>31/01</option>
                         
-                    </select>
+                    </select-->
 
                     <label style="color: #323232;"><b>Horário:</b></label>
                     <select name="Horario">
@@ -135,13 +149,12 @@ include_once('Conexao.php');
                         <option>16:00-17:00</option>
                         <option>17:00-18:00</option>
                     </select>
-                   
                     
                     <input id="btn-submit" type="submit" name="submit_agenda" value="Agendar">
             </form >
             
          </div>
-        
+<div> 
         <br>
         <br>
         <br>
@@ -153,80 +166,71 @@ include_once('Conexao.php');
 
         <br>
         <br>
+</div> 
         <div class="table">
             <table style="text-align: center;" class="table">
                 <!-- caption>Seus Agendamentos</caption -->
                 <thead>
                 <tr>
+                    <?php
+                        if($id_usu == $id_adm){
+                            echo "<th scope='col'>Cliente</th>";
+                        }
+                    ?>
                     <th scope="col">Procedimento</th>
                     
                     <th scope="col">Data</th>
                     
                     <th scope="col">Horário</th>
-
-                    <th  scope="col"> Excluir agendamento</th>
+                    <?php
+                        if($id_usu == $id_adm){
+                            echo "<th  scope='col'> Excluir agendamento</th>";
+                        }
+                    ?>
+                    
                     
                  </tr>
                 </thead>
-                
-
                 <tbody>
                 <?php
-                
-                $consulta = "SELECT id FROM clientes WHERE Email = $logado";
-                $id = $conn->query($consulta);
-
-                
-              
                         while($user_data = mysqli_fetch_assoc($resultado))
                         {
                             echo "<tr>";
-                            
-                            echo "<td>".$user_data['Procedimento']."</td>";
+                            if($id_usu == $id_adm){
+                                $sqlNm = "SELECT * FROM clientes";
+                                $result = $conn->query($sqlNm); 
+                                while ($userNm = mysqli_fetch_assoc($result)){
+                                $id = $userNm['id'];
+                                $id_tab = $user_data['id_usu'];
+                                if($id==$id_tab){
+                                    echo "<td>".$userNm['nome']." ".$userNm['sobrenome']."</td>";
+                                }
+                            }
+                            }
+                            $id_proc = $user_data['id_proc'];
+                            echo "<td>".$user_data['procedimento']."</td>";
                             echo "<td>".$user_data['DiaMes']."</td>";
                             echo "<td>".$user_data['Horario']."</td>";
-                            echo "<td>
-                            <a class='btn btn-sm btn-danger' href='DeleteProcedimento.php?id=$id' title='Deletar'>
-                                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
-                                    <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
-                                </svg>
-                            </a>          
-
-                            </td>";
+                            if($id_usu==$id_adm){
+                                echo "<td> <a href=../Hanna_Kuppas/DeleteProcedimento.php?id_proc=$user_data[id_proc]><img src='../adm/img/TrashCan.jpg' width='30px' heidth='30px'></a></td>";
+                            }
                             echo "</tr>";
-
                         }
                     ?>
-                
                 </tbody> 
             </table>
-        <?php
-        $sqlTotal = "SELECT procedimento FROM procedimentos";
-        $qrTotal = mysqli_query($conn,$sqlTotal) or die (mysqli_error($conn));
-        $numTotal= mysqli_num_rows($qrTotal);
-        $totalPagina = ceil($numTotal/$quantidade);
+        </aside>
+<!--script>
+    var search = document.getElementById('pesquisar')
 
-        echo "Total de Registros: $numTotal <br>";
-        
-        echo '<a href="?menuop=contatos&pagina=1">Primeira Pagina </a>';
+search.addEventListener("keydown", function(event){
+    if(event.key=="Enter"){
+        searchData()
+    }
+})
 
-        if($pagina>6){
-            ?>
-            <li class="page-item"><a class="page-link" href="?menuop=contatos&pagina=<?php echo $pagina-1?>"><<</a></li>
-            <?php
-        }
-
-
-        for($i=1;$i<=$totalPagina;$i++){
-             
-            if($i==$pagina){
-                echo $i;
-            }else{
-                echo "<a href=\"?menuop=contatos&pagina=$i\">$i</a>";
-
-            }
-        }
-        echo "<a href=\"?menuop=contatos&pagina=$totalPagina\">Ultima Página</a>";
-
-        ?>
+function searchData(){
+    window.location='pagAgenda.php?search='+search.value
+}
+</script-->
 </html>

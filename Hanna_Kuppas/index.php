@@ -1,8 +1,7 @@
 <html>
-    
     <head>
         <!-- tittle>Hanna Kuppas</tittle -->
-        <link href="../Hanna Kuppas/css/style.css" rel="stylesheet">
+        <link href="../Hanna_Kuppas/css/style.css" rel="stylesheet">
         <meta name="viewport" content="with=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Home</title>
     </head>
@@ -11,12 +10,11 @@
             <div class="center">
                 <div class="logo"><img src=""></div>
                 <div class="menu">
-                    <a href="index.php">Home</a>
-                    <a href="pagProcedimentos.html">Procedimentos</a>
-                    <a href="pagAgenda.php">Agende</a>
-                    <a href="pagLogin.php">Login</a>
-                    <!-- a href="../Hanna Kuppas/pagRegistro.html"> Cadastro</a -->
-                    <a href="pagSair.php">Sair</a>
+                    <a href="../Hanna_Kuppas/index.php">Home</a>
+                    <a href="../Hanna_Kuppas/pagLogin.php">Agende</a>
+                    <a href="../Hanna_Kuppas/pagLogin.php">Login</a>
+                    <a href="../Hanna_Kuppas/pagRegistro.php"> Cadastro</a> 
+                    <!-- <a href="../Hanna_Kuppas/pagSair.php">Sair</a> -->
                 </div>
             </div>
         </header>
@@ -25,7 +23,7 @@
                 <!-- Div do Social Media-->
             </div>
             <div class="icone">
-                <img src="img/Icone.jpg" style="border-radius: 50%;">
+                <img src="../Hanna_Kuppas/img/Icone.jpg" style="border-radius: 50%;">
             </div>
             <div class="center">
                 <div class="texto-sobre">
@@ -47,31 +45,31 @@
                 <input type="radio" name="slide" id="slide7">
 
                 <div class="slide s1">
-                    <img src="img/Balcao.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/Balcao.jpeg" alt="">
                 </div>
 
                 <!-- div class="slide">
-                    <img src="img/Estante.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/Estante.jpeg" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="img/Deitar.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/Deitar.jpeg" alt="">
                 </div -->
 
                 <div class="slide">
-                    <img src="img/EstanteDois.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/EstanteDois.jpeg" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="img/Quadros.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/Quadros.jpeg" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="img/Produto.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/Produto.jpeg" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="img/ProdutoDois.jpeg" alt="">
+                    <img src="../Hanna_Kuppas/img/ProdutoDois.jpeg" alt="">
                 </div>
 
                 <!-- div class="slide">

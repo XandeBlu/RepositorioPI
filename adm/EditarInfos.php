@@ -15,12 +15,12 @@
                 $Email = $user_data['email'];
             }
         }else {
-            header('Location: ListaUsu.php');
+            header('Location: index.php');
         }
     }
 
     else {
-        header('Location: ListaUsu.php');
+        header('Location: index.php');
     }
 ?>
 

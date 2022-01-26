@@ -14,6 +14,7 @@
        $sql = "SELECT * FROM clientes WHERE email = '$email' and senha = '$password'";
        $result = $conn->query($sql);
        //print_r($result);
+       
 if(mysqli_num_rows($result) < 1)
 {
     //Se o número de linhas com o registro encontrado for menor que 1, ou seja não encontrou...
@@ -28,8 +29,10 @@ else{
     //Senão o usuário poderá acessar o sistema
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $password;
+    $user_data = mysqli_fetch_assoc($result);
+    $id_usu = $user_data['id'];
 
-    header('Location: pagAgenda.php');
+    header("Location: pagAgenda.php?id_usu=$id_usu");
 }
 
 

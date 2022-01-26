@@ -15,5 +15,5 @@
         $result = $conn->query($sqlUpdate);
 
     }
-    header('Location: ListaUsu.php');
+    header('Location: index.php');
 ?>

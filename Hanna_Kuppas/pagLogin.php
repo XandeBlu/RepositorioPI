@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Hanna Kuppas/css/styleRegistro.css">
+    <link rel="stylesheet" href="../Hanna_Kuppas/css/styleRegistro.css">
     <title>Login</title>
 </head>
 <body>
@@ -12,12 +12,11 @@
         <div class="center">
             <div class="logo"><img src=""></div>
             <div class="menu">
-                <a href="index.php">Home</a>
-                <a href="pagProcedimentos.html">Procedimentos</a>
-                <a href="pagAgenda.php">Agende</a>
-                <a href="pagLogin.php">Login</a>
-                <!-- a href="../Hanna Kuppas/pagRegistro.php"> Cadastro</a -->
-                <a href="pagSair.php">Sair</a>
+                <a href="../Hanna_Kuppas/index.php">Home</a>
+                <a href='../Hanna_Kuppas/pagLogin.php'>Agende</a>
+                <!--a href="../Hanna_Kuppas/pagLogin.php">Login</a-->
+                <a href="../Hanna_Kuppas/pagRegistro.php"> Cadastro</a>
+                <!--a href="../Hanna_Kuppas/pagSair.php">Sair</a-->
             </div>
         </div>
     </header>
@@ -36,11 +35,9 @@
             <input id="btn-submit" type="submit" value="Login" name="submit">
         </div>
         <div>
-            <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna Kuppas/pagRegistro.php">Clique aqui.</a></label>
+            <label>O quê? Você ainda nao se registrou no site? <a href="../Hanna_Kuppas/pagRegistro.php">Clique aqui.</a></label>
         </div>
         </form>
-        <p class="error-validation template"></p>
-        <script src="../Hanna Kuppas/js/jsLogin.js"></script>
     </div>
 </body>
 </html>
