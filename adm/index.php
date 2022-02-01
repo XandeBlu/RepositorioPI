@@ -10,12 +10,13 @@
     }
     $result = $conn->query($sql);
 
-    $id_adm = 23;
+    $id_adm = 2;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="C:\Users\User\Documents\GitHub\RepositorioPI\adm\css\styleListaUsu.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,7 @@
     </div>
 </header>
 <br>
-<div class="box-search">
+<div class="box-search" style="text-align: center;">
 
     <input type="search" class="form-control w-25" placeholder="Pesquisa" id="pesquisar">
     <button onclick="searchData()"><img src="../adm/img/Lupa.png" heidth="13px" width="13px"></button>
@@ -41,10 +42,10 @@
 </div>
 <br>
 <div>
-    <table class="table">
+    <table class="table" style="text-align: center;">
         <thead>
             <tr>
-              <th scope="col">id</th>
+              <th scope="col"  >id</th>
               <th scope="col">nome</th>
               <th scope="col">sobrenome</th>
               <th scope="col">senha</th>
