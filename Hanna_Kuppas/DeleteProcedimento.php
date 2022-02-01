@@ -15,6 +15,6 @@
 
         }
     }
-    header("Location: pagAgenda.php?id_usu=23");//mudar aqui
+    header("Location: pagAgenda.php?id_usu=1");//mudar aqui
 
 ?>

@@ -8,7 +8,7 @@ include_once('Conexao.php');
     }
 
     $id_usu = $_GET['id_usu'];
-    $id_adm = 23; //trocar para o id do user da hanna. obs: tbm mudar la no arquivo de delete
+    $id_adm = 1; //trocar para o id do user da hanna. obs: tbm mudar la no arquivo de delete
 
     if($id_usu == $id_adm){
         $sql = "SELECT * FROM procedimentos ORDER BY DiaMes ASC";

@@ -27,7 +27,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link href="../RepositorioPI-main/Hanna Kuppas/css/styleRegistro.css" rel="stylesheet">
+    <link href="C:\wamp64\www\MeuVirtualHost\RepositorioPI-BranchParaTestes\Hanna_Kuppas\css\styleRegistro.css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
     <title>Alteração de dados</title>
 
