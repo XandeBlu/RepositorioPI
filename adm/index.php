@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="../Hanna_Kupas/css/styleAgenda.css">
+    <link href="../Hanna_Kuppas/css/styleAgenda.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuários</title>
 </head>
