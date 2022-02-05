@@ -1,2 +1,3 @@
 # RepositorioPI
 Esse é o repositório que está disponível para o nosso projeto integrador, será usado para colocar nossos códigos. Para rodar o programa com o banco de dados é necessário alguma ferramenta de criação que possua esse serviço, os criadores dos códigos usaram a ferramenta wamp, porém existem outras ferramentas que também servem para esse trabalho como por exemplo o xamp. Após baixar e instalar o wampserver você dever criar um banco de dados chamado hannakupas e duas tabelas, um chamada procedimentos e outra clientes.
+Você pode seguir as instruções desse arquivo para usar nossa aplicação.
