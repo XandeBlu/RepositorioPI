@@ -27,7 +27,7 @@
             </div>
             <div class="center">
                 <div class="texto-sobre">
-                    <h1 style="color: #323232;">Seja Bem Vindo<br>A Agenda Digital<br><span style="color: indianred">HK Estética</span></h1>
+                    <h1 style="color: #323232;">Seja Bem-Vindo<br>À Agenda Digital<br><span style="color: indianred">HK Estética</span></h1>
                     <p>A estética Hanna Kupas oferece diversos procedimentos das mais variadas formas, sendo mais de dezoito tipos diferentes de técnicas.<br><br>Alguns exemplos são a termoterapia, a drenagem linfática, o shiatsu e até mesmo a intradermoterapia pressurizada.<br><br>Além disso, o estabelecimento também oferece atendimento de nutricionismo, oferecendo desde consultas avulsas a pacotes mensais.</p>
                     <!-- button>Agende</button -->
                 </div>
